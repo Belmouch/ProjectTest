@@ -1,0 +1,24 @@
+<div class="form-container">
+  <h2>{{ config?.title }}</h2>
+  <form>
+    <div *ngFor="let field of config?.fields" class="form-field">
+      <label [htmlFor]="field.name">{{ field.label }}</label>
+      <input 
+        title="form field"
+        placeholder="enter value"
+        [id]="field.name"
+        [name]="field.name"
+        [type]="field.type" 
+        [attr.placeholder]="field.label"
+        [attr.title]="field.label"
+        [required]="field.required"
+      />
+    </div>
+    <div class="form-actions" *ngIf="config?.actions">
+      <app-dynamic-button 
+        *ngFor="let action of config?.actions" 
+        [config]="action">
+      </app-dynamic-button>
+    </div>
+  </form>
+</div>

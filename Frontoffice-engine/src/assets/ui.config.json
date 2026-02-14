@@ -1,0 +1,17 @@
+{
+  "pageTitle": "Gestion des utilisateurs",
+  "backgroundColor": "#A32222",
+  "components": [
+    {
+      "type": "form",
+      "title": "Ajouter un utilisateur",
+      "fields": [
+        { "name": "username", "label": "Nom d'utilisateur", "type": "text", "required": true },
+        { "name": "email", "label": "Email", "type": "email" }
+      ],
+      "actions": [
+        { "type": "button", "label": "Enregistrer", "color": "primary", "action": "submitForm" }
+      ]
+    }
+  ]
+}
